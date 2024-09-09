@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Custom style for smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-700">
+    <div class="container mx-auto">
+        <div class="flex justify-center items-center h-full min-h-screen">
+            <div class="bg-gray-100 p-5 rounded-lg shadow-lg w-1/2 ">
+                <h1 class="text-xl mb-4">Random Password Generator</h1>
+                <hr mb-5>
+
+                <div>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-lg mb-4" value="AsYYudzZ" id="password" disabled>
+                </div>
+                <div class="flex space-x-4">
+                    <div class="mb-4">
+                        <label class="inline-flex items-center">
+                            <input type="checkbox" id="includeNumbers" class="form-checkbox">
+                            <span class="ml-2">Include Numbers</span>
+                        </label>
+                    </div>
+                    <div>
+                        <label class="inline-flex items-center">
+                            <input type="checkbox" id="includeSymbols" class="form-checkbox">
+                            <span class="ml-2">Include Symbols</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <button onclick="generatePassword()">Generate Password</button>
+    <p id="password"></p>
+
+   <script src="script.js"></script>
+</body>
+
+</html>
